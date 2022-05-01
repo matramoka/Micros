@@ -2,16 +2,14 @@ package micros_empresarios;
 
 public class Employee {
     private String name;
-    private Employee Chief;
     private boolean isChief;
     private boolean isSit;
     private TipoEmpleado tipo;
 
-    public Employee(String name, Employee chief, boolean isChief, boolean isSit, TipoEmpleado tipo) {
+    public Employee(String name, boolean isChief, boolean isSit, TipoEmpleado tipo) {
         this.name = name;
-        Chief = chief;
-        this.isChief = true;
-        this.isSit = false;
+        this.isChief = isChief;
+        this.isSit = isSit;
         this.tipo = tipo;
     }
 
@@ -25,14 +23,6 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Employee getChief() {
-        return Chief;
-    }
-
-    public void setChief(Employee chief) {
-        Chief = chief;
     }
 
     public boolean isChief() {
@@ -59,9 +49,10 @@ public class Employee {
         this.tipo = tipo;
     }
 
-    public void up(Bus b){}
+    public boolean up(Bus b){
+        return false;
+    }
 
     public void down(Bus b){}
-
 
 }
