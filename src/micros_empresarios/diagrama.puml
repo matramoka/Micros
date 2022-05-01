@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+!pragma layout smetana
+
+class Bus{
+- float volume;
+- Collection Passengers;
+- int quantitySeats;
+- int quantityStandUp;
++ void passengerUp();
++ void passengerDown();
++ Employee firstUp();
+
+}
+
+Abstract class Employee{
+- string name;
+- string Chief;
+- boolean isChief;
+- boolean isSit;
+
++ void up()
++ void down()
+}
+
+class Apurado{
+}
+class Claustro{
+
++ void knowVolume();
+}
+class Fiaca
+
+class Moderados{
+- int tolerance
++ void KnowFreeSpace();
+}
+class Obsecuentes
+
+Employee <|---Apurado
+Employee <|---Claustro
+Employee <|---Fiaca
+Employee <|---Moderados
+Employee <|---Obsecuentes
+
+
+
+@enduml
